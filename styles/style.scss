@@ -1,9 +1,12 @@
 @import '../styles/components/reset.scss';
 @import '../styles/components/header.scss';
 @import '../styles/components/main.scss';
+@import '../styles/components/achievement.scss';
+@import '../styles/components/gallery.scss';
+@import '../styles/components/download.scss';
 
 .wrapper {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 64px;
 }

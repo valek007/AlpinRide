@@ -1,9 +1,8 @@
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 32px 64px;
-    box-sizing: border-box;
-    background-color: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
+    padding: 32px 64px 32px 64px;
+    background: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
 
     &__list{
         display: flex;

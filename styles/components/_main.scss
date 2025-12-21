@@ -4,7 +4,7 @@
     justify-content: space-between;
     gap: 32px;
     padding: 64px 64px 128px;
-    background-color: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
+    background: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
 
     &__data {
         width: 48%;
@@ -60,5 +60,49 @@
     &__counter {
         width: 20px;
         text-align: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 32px;
+        padding-top: 24px;
+    }
+
+    &__btn{
+            width: 100%;
+            padding: 16px 0;
+            background-color: #0578FF;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 16px;
+        width: calc(50% - 16px);
+        
+        &-header{
+            font-weight: bold;
+        }
+
+        &-input{
+            padding: 16px 24px;
+            height: 40px;
+            background-color: white;
+            border-radius: 8px;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #90A3BF;
+        }
+        
     }
 }
