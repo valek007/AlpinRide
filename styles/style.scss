@@ -1,0 +1,9 @@
+@import '../styles/components/reset.scss';
+@import '../styles/components/header.scss';
+@import '../styles/components/main.scss';
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 64px;
+}

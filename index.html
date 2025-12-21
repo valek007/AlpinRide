@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alpine Ride</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header wrapper">
+        <div class="header__logo-box">
+            <img src="assets/images/logo.png" alt="logo" class="header__logo">
+        </div>
+        <ul class="header__list">
+            <li class="header__list-item">Mobile App</li>
+            <li class="header__list-item">FAQs</li>
+            <li class="header__list-item">Contacts</li>
+            <li class="header__list-item">Sign Up</li>
+        </ul>
+    </header>
+
+    <!-- MAIN HERO -->
+    <main class="main wrapper">
+        <!-- DATA LEFT -->
+        <div class="main__data">
+            <h1 class="main__title">Skip the Climbing, Catch the Bus</h1>
+            <p class="main__description">
+                We sell tickets to the best seats in the house – houses on wheels, that is! Get ready for jaw-dropping views without breaking a sweat.
+            </p>
+
+            <!-- RADIO BUTTONS -->
+            <div class="main__radio-btns">
+                <div class="main__radio-box">
+                    <input type="radio" id="round-trip" name="trip" value="1">
+                    <label for="round-trip">Round Trip</label>
+                </div>
+                <div class="main__radio-box">
+                    <input type="radio" id="one-way" name="trip" value="0" checked>
+                    <label for="one-way">One Way</label>
+                </div>
+
+                <!-- COUNTER -->
+                <div class="main__counter-box">
+                    <img src="assets/icons/person.png" alt="person" class="main__person-icon">
+                    <button class="main__counter-btn" type="button">
+                        <img src="assets/icons/minus.png" alt="minus" class="main__btn-icon">
+                    </button>
+                    <span class="main__counter">1</span>
+                    <button class="main__counter-btn" type="button">
+                        <img src="assets/icons/plus.png" alt="plus" class="main__btn-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMAGE RIGHT -->
+        <img src="assets/images/hero.png" alt="hero" class="main__image">
+    </main>
+</body>
+
+</html>
