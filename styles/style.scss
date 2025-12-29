@@ -8,11 +8,15 @@
 @import '../styles/components/footer.scss';
 @import '../styles/components/responsive.scss';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .wrapper {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 64px 64px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 16px;
 }
 
 .hidden-height{

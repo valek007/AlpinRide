@@ -1,26 +1,27 @@
 # Alpine Ride 🏔️🚌
 
 **Alpine Ride** is a front-end educational project developed as part of the **Wonders** module.
-The goal is to build a **responsive landing page** for a bus ticket service in the Alps, following a provided design and technical requirements.
+The goal is to build a **fully responsive landing page** for a bus ticket service in the Alps, following a provided design and technical requirements.
 
 ---
 
 ## Project Phases
 
-The project is structured in two main phases:
+The project is structured in **one main phase**:
 
 1. **Part 1 – HTML and CSS**
 
    * **Part 1.1:** Core structure, hero section, SCSS setup, desktop layout
-   * **Part 1.2:** All remaining static sections and full page layout
-2. **Part 2 – JavaScript Functionality**
+   * **Part 1.2:** All remaining static sections and full page layout, including **responsive behavior for mobile and ultra mobile**
+
+> **Note:** Part 2 (JavaScript functionality) is not implemented in this version.
 
 ---
 
 ## 📌 Current Status – Part 1 Completed (HTML & CSS)
 
-The project is currently **fully completed in terms of structure and styling**.
-All required sections are implemented using **semantic HTML** and **SCSS**, following the provided design.
+The project is **fully completed in terms of structure, styling, and responsiveness**.
+All required sections are implemented using **semantic HTML** and **SCSS**, following the provided design and responsive specifications.
 
 ---
 
@@ -29,10 +30,7 @@ All required sections are implemented using **semantic HTML** and **SCSS**, foll
 ### **Part 1.1 – Core Layout**
 
 * HTML page structure
-* Header with:
-
-  * Logo
-  * Navigation menu
+* Header with logo and navigation menu
 * Hero section:
 
   * Main title and description
@@ -45,7 +43,7 @@ All required sections are implemented using **semantic HTML** and **SCSS**, foll
 
 ---
 
-### **Part 1.2 – Additional Static Sections**
+### **Part 1.2 – Additional Static Sections & Responsive**
 
 * Achievements section
 * Gallery section
@@ -53,30 +51,34 @@ All required sections are implemented using **semantic HTML** and **SCSS**, foll
 * FAQ section (static accordion layout)
 * Footer section with:
 
-  * Navigation links
+  * Logo
+  * Navigation links in two columns
   * Brand information
   * Legal / informational links
+* **Responsive behavior implemented** for:
 
-All sections are styled according to the design system and integrated into the main layout.
+  * Mobile (<768px)
+  * Ultra mobile (<430px)
+* Adjustments include:
+
+  * Text resizing
+  * Column stacking
+  * Centering of all content
+  * Footer restructured with logo on top, links in two columns, and copyright/info centered
 
 ---
 
-## ❌ Not Implemented Yet (Part 2 – JavaScript)
+## ❌ Not Implemented
 
-The following features are **pending implementation** and will be addressed in **Part 2**:
-
-* JavaScript logic:
+* JavaScript functionality:
 
   * Dynamic passenger counter
   * Form validation
   * Autocomplete for inputs
   * Date picker functionality
   * FAQ interaction (accordion behavior)
-* Responsive layouts for:
 
-  * Tablet
-  * Mobile
-* Interactive elements and animations
+> **Note:** This project is currently **static**; JavaScript functionality is not included.
 
 ---
 
@@ -91,22 +93,16 @@ The following features are **pending implementation** and will be addressed in *
 
 ## 🎯 Goal
 
-The objective of this project is to practice:
+The objective of this project was to practice:
 
 * Structuring a complete landing page
 * Organizing scalable SCSS architecture
 * Translating a design into clean, semantic HTML
-* Preparing the project for future JavaScript logic and responsiveness
+* Implementing **responsive behavior** for multiple screen sizes
 
 ---
 
 📌 **Next Step:**
-Implement **Part 2 – JavaScript functionality** and responsive behavior for mobile and tablet.
+This version is fully static. Future enhancements could include JavaScript functionality if desired.
 
 ---
-
-Si quieres, en el próximo mensaje puedo:
-
-* Ajustarlo a un **tono más profesional o más académico**
-* Traducirlo completamente al **inglés o español**
-* Adaptarlo al **formato exacto que te pidan en Wonders**

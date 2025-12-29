@@ -1,9 +1,339 @@
-@media (max-width: 768px) {
-    .header__burger-menu {
-        display: block;
-    }
+/* ============================
+  responsive.scss
+  Alpine Ride - Mobile <768px and ultra mobile <430px
+============================ */
 
-    .header__list {
-        display: none;
+/* ================= GLOBAL FIXES ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* prevents padding from adding extra width */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ================= WRAPPER ================= */
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+  /* default mobile padding */
+}
+
+/* ================= MOBILE & TABLET (<768px) ================= */
+@media (max-width: 768px) {
+
+  .wrapper {
+    padding: 0 16px;
+    /* mobile */
+  }
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header__list {
+    display: none;
+  }
+
+  .header__burger-menu {
+    display: block;
+  }
+
+  .header__menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* MAIN HERO */
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .main__data,
+  .main__image {
+    width: 100%;
+  }
+
+  .main__image {
+    display: none;
+    /* hide image on mobile */
+  }
+
+  .main__title {
+    font-size: clamp(28px, 6vw, 32px);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .main__description {
+    font-size: clamp(12px, 2.5vw, 16px);
+    text-align: center;
+    margin: 12px 0;
+  }
+
+  .main__radio-btns {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+  }
+
+  .main__counter-box {
+    gap: 4px;
+  }
+
+  .main__item {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .main__item-header {
+    font-size: 14px;
+  }
+
+  .main__item-input {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .main__btn {
+    width: 100%;
+    max-width: 360px;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  /* ACHIEVEMENTS */
+  .achievement {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .achievement__item {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .achievement__item-number {
+    font-size: 20px;
+  }
+
+  .achievement__item-text {
+    font-size: 14px;
+  }
+
+  /* GALLERY */
+  .gallery__main {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .gallery__left,
+  .gallery__right {
+    width: 100%;
+  }
+
+  .gallery__right-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* DOWNLOAD */
+  .download__badges {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .download__header {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* FAQ */
+  .faq__title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .faq__question,
+  .faq__answer {
+    font-size: 14px;
+  }
+
+  .faq__item {
+    margin-bottom: 12px;
+  }
+
+  /* FOOTER */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  /* LOGO on top, centered and extended */
+  .footer__logo {
+    width: 100%;
+    max-width: 300px;
+    /* optional */
+    margin-bottom: 16px;
+  }
+
+  /* LINKS in two columns below the logo */
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 24px;
+    /* row x column gap */
+    width: 100%;
+    max-width: 360px;
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Each list centered */
+  .footer__list {
+    width: auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* TOP BOX / CONTACTS */
+  .footer__top-box {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+
+    .contacts__title,
+    .contacts__text,
+    .contacts__text--extra-margin,
+    .contacts__adress {
+      font-size: 12px;
+      /* more compact */
+      line-height: 1.2;
     }
+  }
+
+  /* COPYRIGHT / rights */
+  .footer__bottom-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    .footer__data p {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+}
+
+/* ================= MOBILE ULTRA SMALL (<430px) ================= */
+@media (max-width: 430px) {
+
+  .wrapper {
+    padding: 0 12px;
+  }
+
+  /* MAIN HERO */
+  .main__title {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .main__description {
+    font-size: clamp(10px, 3vw, 14px);
+  }
+
+  .main__radio-btns {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .main__counter-box {
+    gap: 3px;
+  }
+
+  .main__item-header {
+    font-size: 12px;
+  }
+
+  .main__item-input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .main__btn {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* ACHIEVEMENTS */
+  .achievement__item-number {
+    font-size: 18px;
+  }
+
+  .achievement__item-text {
+    font-size: 12px;
+  }
+
+  /* DOWNLOAD */
+  .download__header {
+    font-size: 18px;
+  }
+
+  /* FAQ */
+  .faq__title {
+    font-size: 20px;
+  }
+
+  .faq__question,
+  .faq__answer {
+    font-size: 12px;
+  }
+
+  /* FOOTER */
+  .footer__logo {
+    max-width: 250px;
+  }
+
+  .footer__links {
+    max-width: 300px;
+    gap: 8px 16px;
+  }
+
+  .footer__top-box .contacts__title,
+  .footer__top-box .contacts__text,
+  .footer__top-box .contacts__text--extra-margin,
+  .footer__top-box .contacts__adress {
+    font-size: 10px;
+  }
+
+  .footer__bottom-box .footer__data p {
+    font-size: 10px;
+  }
 }
