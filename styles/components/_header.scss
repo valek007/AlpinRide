@@ -1,13 +1,16 @@
 .header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 32px 64px 32px 64px;
     background: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
+    position: relative;
 
     &__list{
         display: flex;
         align-items: center;
         gap: 95px;
+        list-style: none;
     }
 
     &__list-item{
@@ -27,5 +30,27 @@
 
     &__logo{
         height: 50px;
+    }
+
+    &__burger-menu{
+        width: 30px;
+        height: 24px;
+        display: none;
+    }
+
+    &__menu{
+        width: 200px;
+        background-color: #0578FF;
+        position: absolute;
+        right: 0;
+        top: 32px;
+        color: white;
+        height: 0;
+        overflow: hidden;
+        
+        &-list{
+            padding: 20px;
+            list-style: none;
+        }
     }
 }

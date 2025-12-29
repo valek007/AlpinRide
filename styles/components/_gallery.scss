@@ -9,7 +9,7 @@
     }
 
     &__main {
-        display: flex; // columnas lado a lado
+        display: flex; 
         flex-direction: row;
         gap: 32px;
         width: 100%;
@@ -17,7 +17,7 @@
     }
 
     &__left {
-        width: 40%; // ocupa 40%
+        width: 40%; 
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -30,7 +30,7 @@
     }
 
     &__right {
-        width: 60%; // ocupa 60%
+        width: 60%; 
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -48,7 +48,6 @@
             }
         }
 
-        // Imagen de abajo ocupa 100% del ancho
         >img {
             width: 100%;
             display: block;

@@ -1,0 +1,96 @@
+.footer {
+    background: #0578FF;
+    color: white;
+
+    &__top-box {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__bottom-box {
+        padding: 64px 0px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__data {
+        padding: 50px;
+        margin-top: auto;
+        font-size: 14px;
+        line-height: 1.4;
+        opacity: 0.9;
+    }
+
+    /* LEFT */
+    &__logo {
+        height: 51px;
+    }
+
+    /* RIGHT */
+    &__links {
+        display: flex;
+        gap: 64px;
+    }
+
+
+
+    &__list {
+        width: 192px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        list-style: none;
+
+        &-item {
+            cursor: pointer;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+        &__-item:first-of-type {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+
+
+}
+
+.contacts {
+    padding: 60px 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 50%;
+    border-radius: 16px;
+    margin-top: -100px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    &__title {
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 28px;
+
+        &--extra-margin {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__adress {
+        margin-top: 30px;
+        font-size: 18px;
+        width: 40%;
+    }
+}

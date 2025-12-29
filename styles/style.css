@@ -6,13 +6,16 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 32px 64px 32px 64px;
   background: linear-gradient(190deg, rgb(243, 244, 246) 0%, rgb(225, 238, 254) 100%);
+  position: relative;
 }
 .header__list {
   display: flex;
   align-items: center;
   gap: 95px;
+  list-style: none;
 }
 .header__list-item {
   font-size: 20px;
@@ -29,6 +32,25 @@
 }
 .header__logo {
   height: 50px;
+}
+.header__burger-menu {
+  width: 30px;
+  height: 24px;
+  display: none;
+}
+.header__menu {
+  width: 200px;
+  background-color: #0578FF;
+  position: absolute;
+  right: 0;
+  top: 32px;
+  color: white;
+  height: 0;
+  overflow: hidden;
+}
+.header__menu-list {
+  padding: 20px;
+  list-style: none;
 }
 
 .main {
@@ -218,10 +240,128 @@
   width: 15%;
 }
 
+.faq__title {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.faq__item:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.faq__question-box {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+.faq__answer {
+  padding: 16px 0;
+}
+
+.footer {
+  background: #0578FF;
+  color: white;
+}
+.footer__top-box {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.footer__bottom-box {
+  padding: 64px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__data {
+  padding: 50px;
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+.footer {
+  /* LEFT */
+}
+.footer__logo {
+  height: 51px;
+}
+.footer {
+  /* RIGHT */
+}
+.footer__links {
+  display: flex;
+  gap: 64px;
+}
+.footer__list {
+  width: 192px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+.footer__list-item {
+  cursor: pointer;
+}
+.footer__list-item:hover {
+  font-weight: bold;
+}
+.footer__list__-item:first-of-type {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contacts {
+  padding: 60px 0;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 50%;
+  border-radius: 16px;
+  margin-top: -100px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.contacts__title {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.contacts__text {
+  font-size: 28px;
+}
+.contacts__text--extra-margin {
+  margin-bottom: 8px;
+}
+.contacts__adress {
+  margin-top: 30px;
+  font-size: 18px;
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .header__burger-menu {
+    display: block;
+  }
+  .header__list {
+    display: none;
+  }
+}
 .wrapper {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding: 64px 64px;
+}
+
+.hidden-height {
+  height: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
