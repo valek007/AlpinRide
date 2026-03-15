@@ -1,108 +1,47 @@
-# Alpine Ride 🏔️🚌
+                                Alpine Ride 🏔️🚌
+Alpine Ride is a front-end project developed as part of the Wonders module. 
+It is a fully responsive and interactive landing page for a premium bus ticket service in the Alps.
 
-**Alpine Ride** is a front-end educational project developed as part of the **Wonders** module.
-The goal is to build a **fully responsive landing page** for a bus ticket service in the Alps, following a provided design and technical requirements.
+📌 Current Status – Fully Functional (HTML, SCSS & JavaScript)
+The project has evolved from a static layout to a fully interactive application. 
+All core booking features are now implemented with custom JavaScript, providing a seamless user experience for searching trips.
 
----
+✅ Implemented Features
+Interactive Booking Form (New! - JS Implemented)
+Custom Date Range Picker:
 
-## Project Phases
+Dynamic calendar rendering using JavaScript.
+- Range selection logic (Start Date - End Date) with visual highlighting.
+- "Confirm" button to lock selections and close the dropdown.
+- Floating UI using absolute positioning for a modern look.
 
-The project is structured in **one main phase**:
+Dynamic Station Selector:
+- Dropdown organized by countries (Switzerland, France, Italy, etc.).
+- Interactive accordion-style country lists.
+- Auto-population of inputs upon selection.
 
-1. **Part 1 – HTML and CSS**
+Trip Type Logic:
 
-   * **Part 1.1:** Core structure, hero section, SCSS setup, desktop layout
-   * **Part 1.2:** All remaining static sections and full page layout, including **responsive behavior for mobile and ultra mobile**
+- Switching between Round Trip and One Way dynamically updates the UI.
+- Automatic resetting of dates and arrival stations when switching modes to prevent data inconsistency.
+- Disabling of "Return" fields in One Way mode.
+- Passenger Counter: Interactive UI for selecting travelers (implemented in persons.js).
+- Design & Responsiveness
 
-> **Note:** Part 2 (JavaScript functionality) is not implemented in this version.
+Fully Responsive: Optimized for Desktop (1440px), Tablet (<768px), and Mobile (<430px).
+SCSS Architecture: Scalable folder structure using partials, variables, and mixins.
+Clean UI: Smooth transitions and floating containers that do not disrupt the page flow.
 
----
+🛠️ Technologies Used
+HTML5: Semantic structure.
+SCSS (Sass): Advanced styling and responsive architecture.
+JavaScript (ES6+): Modular logic (ES Modules) for calendar, stations, and form state.
+npm scripts: For Sass compilation and development workflow.
 
-## 📌 Current Status – Part 1 Completed (HTML & CSS)
+🎯 Project Goals Achieved
+The objective of this project was to master:
 
-The project is **fully completed in terms of structure, styling, and responsiveness**.
-All required sections are implemented using **semantic HTML** and **SCSS**, following the provided design and responsive specifications.
-
----
-
-## ✅ Implemented Features
-
-### **Part 1.1 – Core Layout**
-
-* HTML page structure
-* Header with logo and navigation menu
-* Hero section:
-
-  * Main title and description
-  * Trip type selection (Round Trip / One Way)
-  * Passenger counter UI (static)
-* SCSS architecture with partials and components
-* Base styles and CSS reset
-* Desktop layout (1440px)
-* Sass compilation via npm scripts
-
----
-
-### **Part 1.2 – Additional Static Sections & Responsive**
-
-* Achievements section
-* Gallery section
-* Download section with app images
-* FAQ section (static accordion layout)
-* Footer section with:
-
-  * Logo
-  * Navigation links in two columns
-  * Brand information
-  * Legal / informational links
-* **Responsive behavior implemented** for:
-
-  * Mobile (<768px)
-  * Ultra mobile (<430px)
-* Adjustments include:
-
-  * Text resizing
-  * Column stacking
-  * Centering of all content
-  * Footer restructured with logo on top, links in two columns, and copyright/info centered
-
----
-
-## ❌ Not Implemented
-
-* JavaScript functionality:
-
-  * Dynamic passenger counter
-  * Form validation
-  * Autocomplete for inputs
-  * Date picker functionality
-  * FAQ interaction (accordion behavior)
-
-> **Note:** This project is currently **static**; JavaScript functionality is not included.
-
----
-
-## 🛠️ Technologies Used
-
-* HTML5
-* SCSS (Sass)
-* CSS Flexbox & Grid
-* npm scripts for Sass compilation
-
----
-
-## 🎯 Goal
-
-The objective of this project was to practice:
-
-* Structuring a complete landing page
-* Organizing scalable SCSS architecture
-* Translating a design into clean, semantic HTML
-* Implementing **responsive behavior** for multiple screen sizes
-
----
-
-📌 **Next Step:**
-This version is fully static. Future enhancements could include JavaScript functionality if desired.
-
----
+DOM Manipulation: Creating complex UI elements (like a calendar) from scratch.
+Event Handling: Managing multiple user interactions across different form components.
+State Management: Ensuring the form resets and behaves correctly when trip types change.
+Modular JS: Organizing code into clean, reusable files (calendar.js, stationSelector.js, etc.).

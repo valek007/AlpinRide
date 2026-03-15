@@ -1,0 +1,128 @@
+/* Input container: must be relative so the calendar positions correctly against it */
+.main__block {
+    position: relative;
+}
+
+/* General calendar container */
+.calendar {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Appears right below the input row */
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px; /* Aesthetic spacing */
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    gap: 10px;
+    
+    /* Smooth animation */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .month-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+
+        .month-box {
+            width: 300px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+        }
+    }
+
+    .month-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        span { flex: 1; text-align: center; }
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            &:hover { color: #0578FF; }
+        }
+    }
+
+    .days-titles {
+        display: flex;
+        .day-title {
+            width: calc(100% / 7);
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            padding-bottom: 5px;
+        }
+    }
+
+    .days {
+        display: flex;
+        flex-wrap: wrap;
+        .day-title {
+            width: calc(100% / 7);
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+
+            &:hover:not(.inactive) { background-color: #f0f7ff; }
+
+            &.inactive { color: #ccc; cursor: default; }
+
+            &.selected {
+                background-color: #0578FF !important;
+                color: white;
+                border-radius: 4px;
+            }
+
+            &.in-range {
+                background-color: rgba(5, 120, 255, 0.1);
+                color: #0578FF;
+            }
+        }
+    }
+}
+
+/* Confirm button */
+.calendar-confirm-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #0578FF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover { background: #0056b3; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calendar .month-container { flex-direction: column; }
+}
