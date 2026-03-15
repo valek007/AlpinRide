@@ -20,17 +20,15 @@ export function initStationSelector() {
     function updateArrivalState() {
         const oneWay = document.querySelector('#one-way').checked;
         
-        // Always reset departure value to start fresh
         departInput.value = ''; 
-        // Reset arrival value
         arrivalInput.value = '';
 
         if (oneWay) {
             arrivalItem.classList.add('return-disabled');
-            arrivalInput.placeholder = 'N/A'; // Optional: visual feedback
+            arrivalInput.placeholder = 'N/A'; 
         } else {
             arrivalItem.classList.remove('return-disabled');
-            arrivalInput.placeholder = 'Arrival Station'; // Original text
+            arrivalInput.placeholder = 'Arrival Station'; 
         }
     }
 
@@ -38,7 +36,6 @@ export function initStationSelector() {
         radio.addEventListener('change', updateArrivalState);
     });
 
-    // Run once on load to set initial state
     updateArrivalState();
 
     function openDropdown(inputEl) {
@@ -72,7 +69,6 @@ export function initStationSelector() {
                 stationEl.className = 'station-item';
                 stationEl.textContent = station;
                 stationEl.addEventListener('click', () => {
-                    // Check if input is an <input> or a <span>
                     if (activeInput.tagName === 'INPUT') {
                         activeInput.value = station;
                     } else {

@@ -45,7 +45,6 @@
   }
 }
 
-// Inputs for station display
 .main__item-input input.station-display {
   border: none;
   background: transparent;
@@ -58,7 +57,6 @@
   cursor: pointer;
 }
 
-// We reuse the .main__item-header styles for the station selector titles
 .return-disabled {
   opacity: 0.4; 
   cursor: not-allowed;

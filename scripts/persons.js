@@ -22,6 +22,5 @@ export function initPersons() {
         updateButtons();
     });
 
-    // Init state
     updateButtons();
 }

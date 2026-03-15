@@ -6,13 +6,11 @@
     <title>Alpine Ride</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header class="header wrapper">
         <div class="header__logo-box">
             <img src="assets/icons/logo-black.png" alt="logo" class="header__logo">
@@ -37,9 +35,7 @@
         </div>
     </header>
 
-    <!-- MAIN HERO -->
     <main class="main wrapper">
-        <!-- LEFT DATA -->
         <div class="main__data">
             <h1 class="main__title">Skip the Climbing, Catch the Bus</h1>
             <p class="main__description">
@@ -47,7 +43,6 @@
                 Get ready for jaw-dropping views without breaking a sweat.
             </p>
 
-            <!-- RADIO BUTTONS -->
             <div class="main__radio-btns">
                 <div class="main__radio-box">
                     <input type="radio" id="round-trip" name="trip" value="1" checked>
@@ -59,7 +54,6 @@
                     <label for="one-way">One Way</label>
                 </div>
 
-                <!-- PASSENGER COUNTER -->
                 <div class="main__counter-box">
                     <img src="assets/icons/person.png" alt="person" class="main__person-icon">
                     <button class="main__counter-btn" type="button">
@@ -72,9 +66,7 @@
                 </div>
             </div>
 
-            <!-- SEARCH BLOCK -->
             <div class="main__block">
-                <!-- DEPARTURE -->
                 <div class="depart-item main__item" id="depart-station">
                     <p class="main__item-header">Departure</p>
                     <div class="main__item-input">
@@ -82,7 +74,6 @@
                     </div>
                 </div>
 
-                <!-- ARRIVAL -->
                 <div class="return-item main__item" id="arrival-station">
                     <p class="main__item-header">Arrival</p>
                     <div class="main__item-input">
@@ -91,7 +82,6 @@
                 </div>
 
 
-                <!-- DEPART DATE -->
                 <div class="main__item" id="depart-item">
                     <p class="main__item-header">Pick your lucky day</p>
                     <div class="main__item-input">
@@ -100,7 +90,6 @@
                     </div>
                 </div>
 
-                <!-- RETURN DATE -->
                 <div class="main__item" id="return-item">
                     <p class="main__item-header">Pick your lucky day</p>
                     <div class="main__item-input">
@@ -109,7 +98,6 @@
                     </div>
                 </div>
 
-                <!-- CALENDAR -->
                 <div class="calendar" id="calendar">
                     <div class="month-container">
                         <div class="month-box" id="month-box-left"></div>
@@ -118,24 +106,20 @@
                     <button type="button" class="calendar-confirm-btn" id="calendar-confirm">Confirm</button>
                 </div>
 
-                <!-- FIND BUTTON -->
                 <button class="main__btn" type="button" id="find-ride">
                     Find My Alpine Ride
                 </button>
             </div>
         </div>
 
-        <!-- HERO IMAGE -->
         <img src="assets/images/hero.png" alt="hero" class="main__image">
     </main>
 
-    <!-- STATION DROPDOWN OVERLAY -->
     <div class="station-dropdown-container" id="station-dropdown-container" style="display:none;">
         <div class="station-dropdown" id="station-dropdown"></div>
     </div>
 
 
-    <!-- ACHIEVEMENTS -->
     <div class="achievement wrapper">
 
         <div class="achievement__item">
@@ -162,7 +146,6 @@
 
 
 
-    <!-- GALLERY -->
     <div class="gallery wrapper">
 
         <p class="gallery__header">Glimpses of Glory</p>
@@ -191,8 +174,7 @@
 
 
 
-    <!-- DOWNLOAD -->
-    <div class="download wrapper">
+    <div class="download wrapper" id="download-section">
 
         <p class="download__header">Free downloads App Now!</p>
 
@@ -206,36 +188,116 @@
 
 
 
-    <!-- FAQ -->
-    <div class="faq wrapper">
+    <section class="faq wrapper" id="faq-section">
+        <h2 class="faq__title">FAQ's</h2>
 
-        <p class="faq__title">FAQ's</p>
+        <div class="faq__list">
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">Alpine Bus Journeys?</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows to
+                        breathtaking mountain vistas, charming villages, and air so fresh it might make you yodel
+                        (please don't, unless you're outside). It's transportation with a side of unparalleled scenery
+                        (and maybe a hairpin turn).</p>
+                </div>
+            </div>
 
-        <!-- FAQ items kept same as your original -->
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">What about seating options?</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>Generally, you'll find comfy standard seats (great views, great value, maybe great new friends)
+                        and perhaps slightly better seats with extra legroom. All offer a front-row seat to the greatest
+                        show on Earth – the Alps!</p>
+                </div>
+            </div>
 
-    </div>
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">What is the Alpine Wallet?</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>It's your digital stash of cash that makes booking bus tickets smoother than a perfectly paved
+                        mountain road. Load it up and watch your travel dreams become reality faster than a bus goes
+                        downhill.</p>
+                </div>
+            </div>
 
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">Why a Bus Station Fee?</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>A small contribution to ensure the station is clean, has reasonably fresh mountain air (filtered
+                        from bus fumes), and enough signs pointing you towards your bus, not away from it. Sometimes
+                        covers the cost of moving rogue bicycles.</p>
+                </div>
+            </div>
 
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">Vitae sollicitudin viae libero tincidunt</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>Your loyalty points for cruising the mountain roads! Higher scores might get you priority
+                        boarding (less elbowing for the best window seat!) or maybe just bragging rights among fellow
+                        peak-passengers who prefer four wheels.</p>
+                </div>
+            </div>
 
-    <!-- FOOTER -->
-    <footer class="footer wrapper">
+            <div class="faq__item">
+                <div class="faq__header">
+                    <span class="faq__question">Why are buses late?</span>
+                    <div class="faq__icon">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                    </div>
+                </div>
+                <div class="faq__content">
+                    <p>Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving
+                        sheep on the road, and sometimes the driver just had to stop for a photo of that view. Or maybe
+                        they got stuck behind a tractor. Welcome to "Mountain Road Time"!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer class="footer wrapper" id="contact-section">
         <div class="footer__top-box">
-
             <div class="contacts">
                 <p class="contacts__title">Contact us</p>
-
                 <p class="contacts__text--extra-margin">+41 98765 43210</p>
                 <p class="contacts__text">hello@peakpasses.eu</p>
-
                 <p class="contacts__adress">
                     Alpenblick Strasse 7,<br>
                     12345 Edelweiss Town, Alps
                 </p>
-
             </div>
-
         </div>
+
 
 
 
@@ -280,6 +342,14 @@
         </div>
     </footer>
     <script type="module" src="./scripts/scripts.js" defer></script>
+    <div id="custom-alert" class="modal-overlay">
+    <div class="modal-content">
+        <img src="assets/icons/logo-black.png" alt="logo" class="modal-logo">
+        <h3>Request Processed!</h3>
+        <p>Your request has been processed successfully. We will send a payment link along with the trip details to your email shortly.</p>
+        <button id="close-modal" class="main__btn">Got it!</button>
+    </div>
+</div>
 </body>
 
 </html>

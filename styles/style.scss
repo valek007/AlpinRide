@@ -4,11 +4,14 @@
 @use '../styles/components/achievement.scss';
 @use '../styles/components/gallery.scss';
 @use '../styles/components/download.scss';
-@use '../styles/components/faq.scss';
+@use '../styles/components/faqs.scss';
 @use '../styles/components/footer.scss';
 @use '../styles/components/responsive.scss';
 @use '../styles/components/calendar.scss';
 @use '../styles/components/stationSelector.scss';
+@use '../styles/components/burgerMenu.scss';
+@use '../styles/components/findRide.scss';
+
 *, *::before, *::after {
   box-sizing: border-box;
 }

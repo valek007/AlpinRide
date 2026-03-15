@@ -1,56 +1,101 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 64px 32px 64px;
+    padding: 32px 64px;
     background: linear-gradient(190deg, rgba(243,244,246,1) 0%, rgba(225,238,254,1) 100%);
     position: relative;
+    // Esto asegura que el scroll no se pegue al borde superior
+    scroll-margin-top: 100px; 
 
-    &__list{
+    &__list {
         display: flex;
         align-items: center;
         gap: 95px;
         list-style: none;
-    }
 
-    &__list-item{
-        font-size: 20px;
-        line-height: 24px;
-        font-family: 'Popins';
-        font-weight: 400;
-        font-style: regular;
-        letter-spacing: 0%;
-        vertical-align: middle;
-
-        &:hover{
-            font-weight: bold;
-            cursor: pointer;
+        @media (max-width: 768px) {
+            display: none; // Escondemos la lista normal en móvil
         }
     }
 
-    &__logo{
+    &__list-item {
+        font-size: 32px;
+        line-height: 24px;
+        font-family: 'Poppins', sans-serif; // Corregido 'Popins'
+        font-weight: 400;
+        cursor: pointer; // <--- Añadido aquí para que siempre sea clickeable
+        transition: all 0.3s ease;
+
+        &:hover {
+            font-weight: bold;
+            color: #0578FF; // Un toque de azul al pasar el mouse
+        }
+    }
+
+    &__logo {
         height: 50px;
     }
 
-    &__burger-menu{
+    &__burger-menu {
         width: 30px;
         height: 24px;
         display: none;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            display: block; // Aparece en móvil
+        }
     }
 
-    &__menu{
-        width: 200px;
-        background-color: #0578FF;
+    &__menu {
         position: absolute;
-        right: 0;
-        top: 32px;
+        top: 100%; // Se despliega justo debajo del header
+        left: 50%; // Centrado
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        background-color: #0578FF; // Tu azul de marca
         color: white;
-        height: 0;
-        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         
-        &-list{
+        // Estado cerrado (Animación)
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.3s ease;
+        z-index: 1000;
+
+        &.active {
+            max-height: 500px; // Altura suficiente para los links
+            opacity: 1;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        &-list {
             padding: 20px;
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+
+            // Ajuste de los items dentro del menú azul
+            .header__list-item {
+                color: white;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding-bottom: 10px;
+
+                &:last-child {
+                    border-bottom: none;
+                    background: white;
+                    color: #0578FF;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
         }
     }
 }

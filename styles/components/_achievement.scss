@@ -1,8 +1,9 @@
 .achievement{
     display: flex;
+    height: 300px;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 64px;
+    padding: 100px 64px;
     background: #0578FF;
 
     &__item{
